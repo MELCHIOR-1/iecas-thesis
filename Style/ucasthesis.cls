@@ -140,13 +140,14 @@
   \thispagestyle{empty}
   \begin{center}
     \zihao{4}\bfseries\songti
-    \hfill{} {\UCAS@label@confidential \UCASunderline[50pt]{\zihao{5}\songti\UCAS@value@confidential}}
-    \vskip \stretch{3}
+    \hfill{} %{\UCAS@label@confidential \UCASunderline[50pt]{\zihao{5}\songti\UCAS@value@confidential}}
+    \vskip \stretch{4}
       \UCAS@value@schoollogo
     \vskip \stretch{4}
       {\zihao{1}\heiti \UCAS@value@degree\UCAS@label@thesis}
     \vskip \stretch{4}
-      {\zihao{3} \UCASunderline{\ \UCAS@value@title\ }}
+      %{\zihao{3} \UCASunderline{\ \UCAS@value@title\ }}
+	  {\zihao{3} \ \UCAS@value@title\ }
     \vskip \stretch{6}
     \def\tabcolsep{1pt}
     \def\arraystretch{1.4}
@@ -235,28 +236,29 @@
 %%%%*********************** Make Author Declaration ***********************************
 %%
 \newcommand\makedeclaration{%
+  \zihao{4}\songti
   \cleardoublepage
   \thispagestyle{empty}
-
   \begin{center}
-      {\zihao{3}\heiti \UCAS@value@declare@create}
+      {\zihao{3}\songti \textbf{\UCAS@value@declare@create}}
   \end{center}
 
-  \UCAS@value@declare@creativity\\
+  \UCAS@value@declare@creativity
 
-  \hfill{} {\UCAS@value@declare@s \UCASunderline[70pt]{ } \ \ \UCAS@value@declare@d \UCASunderline[70pt]{ }}\\
+  \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad} \\
 
-  \vskip 150pt
+  %\vskip 20pt
 
   \begin{center}
-      {\zihao{3}\heiti \UCAS@value@declare@right}
+      {\zihao{3}\songti \textbf{\UCAS@value@declare@right}}
   \end{center}
 
   \UCAS@value@declare@rights
-
-  {\heiti \UCAS@value@declare@rule}\\
-
-  \hfill{} {\UCAS@value@declare@s \UCASunderline[70pt]{ } \ \ \UCAS@value@declare@t \UCASunderline[70pt]{ } \ \ \UCAS@value@declare@d \UCASunderline[70pt]{ }}
+  
+  \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
+  
+  \hfill{} {\UCAS@value@declare@t \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
+  
   \clearpage
   \if@twoside
     \thispagestyle{empty}

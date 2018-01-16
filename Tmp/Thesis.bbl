@@ -1,0 +1,36 @@
+\begin{thebibliography}{5}
+\bibpunct{[}{]}{,}{s}{,}{,}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI: #1}\else
+  \providecommand{\doi}{DOI: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Wikibook(2014)]{wikibook2014latex}
+WIKIBOOK.
+\newblock http://en.wikibooks.org/wiki/latex\allowbreak[M].
+\newblock [S.l.]: On-line Resources, 2014.
+
+\bibitem[Lamport(1986)]{lamport1986document}
+LAMPORT L.
+\newblock Document preparation system\allowbreak[M].
+\newblock [S.l.]: Addison-Wesley Reading, MA, 1986.
+
+\bibitem[陈浩元(2005)]{chen2005zhulu}
+陈浩元.
+\newblock 著录文后参考文献的规则及注意事项\allowbreak[J].
+\newblock 编辑学报, 2005, 17\penalty0 (6): 413--415.
+
+\bibitem[初景利(2004)]{chu2004tushu}
+初景利.
+\newblock 图书馆数字参考咨询服务研究\allowbreak[M].
+\newblock 北京: 北京图书馆出版社, 2004.
+
+\bibitem[Stamerjohanns\ et~al.(2009)Stamerjohanns, Ginev, David, Misev,
+  Zamdzhiev, and Kohlhase]{stamerjohanns2009mathml}
+STAMERJOHANNS H, GINEV D, DAVID C, et~al.
+\newblock {MathML}-aware article conversion from {LaTeX}\allowbreak[J].
+\newblock Towards a Digital Mathematics Library, 2009, 16\penalty0 (2):
+  109--120.
+
+\end{thebibliography}

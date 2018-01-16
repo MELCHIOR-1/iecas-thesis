@@ -102,6 +102,7 @@ macros package]
 %% determine \rmfamily, usually for main contents
 %% because of \renewcommand*{\familydefault}{\rmdefault}, it's also determine \normalfont.
 %% examples: Times New Roman, Garamond, Adobe Garamond Pro
+\setmainfont{Times New Roman}
 %\setmainfont[BoldFont=Garamond-Bold,ItalicFont=Garamond-Italic]{Garamond}%
 %% Sans serif - typefaces without strokes (without serif) to get high readability
 %% determine \sffamily, usually for signage, headings that demanding high readability
@@ -322,28 +323,28 @@ macros package]
 %% define different kinds of header and footer for different parts
 \fancypagestyle{frontmatterstyle}{% style for frontmatter
     \fancyhf{}% clear fields
-    \fancyhead[RE]{\small \@title}% structure elements
-    \fancyhead[LO]{\small \leftmark}% structure elements
-    \fancyhead[LE]{\small \thepage}% page number
-    \fancyhead[RO]{\small \thepage}% page number
+    \fancyhead[CE]{\small \@title}% structure elements
+    \fancyhead[CO]{\small \leftmark}% structure elements
+    \fancyfoot[CE]{\small \thepage}% page number
+    \fancyfoot[CO]{\small \thepage}% page number
     \renewcommand{\headrulewidth}{1pt}% header rule
     \renewcommand{\footrulewidth}{0pt}% footer rule
 }
 \fancypagestyle{mainmatterstyle}{% style for mainmatter
     \fancyhf{}% clear fields
-    \fancyhead[RE]{\small \@title}% structure elements
-    \fancyhead[LO]{\small \CTEXthechapter\ \leftmark}% structure elements
-    \fancyhead[LE]{\small \thepage}% page number
-    \fancyhead[RO]{\small \thepage}% page number
+    \fancyhead[CE]{\small \@title}% structure elements
+    \fancyhead[CO]{\small \CTEXthechapter\ \leftmark}% structure elements
+    \fancyfoot[CE]{\small \thepage}% page number
+    \fancyfoot[CO]{\small \thepage}% page number
     \renewcommand{\headrulewidth}{1pt}% header rule
     \renewcommand{\footrulewidth}{0pt}% footer rule
 }
 \fancypagestyle{backmatterstyle}{% header and footer style for backmatter
     \fancyhf{}% clear fields
-    \fancyhead[RE]{\small \@title}% structure elements
-    \fancyhead[LO]{\small \leftmark}% structure elements
-    \fancyhead[LE]{\small \thepage}% page number
-    \fancyhead[RO]{\small \thepage}% page number
+    \fancyhead[CE]{\small \@title}% structure elements
+    \fancyhead[CO]{\small \leftmark}% structure elements
+    \fancyfoot[CE]{\small \thepage}% page number
+    \fancyfoot[CO]{\small \thepage}% page number
     \renewcommand{\headrulewidth}{1pt}% header rule
     \renewcommand{\footrulewidth}{0pt}% footer rule
 }
