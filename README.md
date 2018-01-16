@@ -15,7 +15,7 @@
 1. 双击Compile.bat，然后在Tmp中会生成Thesis.pdf中。
 2. 直接在Texmaker或WinEdit或Texworks等编辑器中编译，则在当前文件夹中生成Thesis.pdf。注意，在编辑器中编译可能需要4步才能生成最终的版本（pdfLatex->Bibtex->pdfLatex->pdfLatex）
 
-如果遇到什么问题，可以查看HowToUse.pdf文档。
+如果遇到什么问题，可以查看README4ucasthesis.md文档和HowToUse.pdf文档。
 
 ## 修改日志
 
