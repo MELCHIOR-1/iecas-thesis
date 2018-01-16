@@ -56,6 +56,8 @@
 \RequirePackage[usenames,dvipsnames,table]{xcolor}%
 %% math packages
 \RequirePackage{amsmath,amssymb,amstext}
+%% format packages
+\RequirePackage{setspace}
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%************************ Load Class Configuretion ********************************
@@ -236,29 +238,30 @@
 %%%%*********************** Make Author Declaration ***********************************
 %%
 \newcommand\makedeclaration{%
-  \zihao{4}\songti
-  \cleardoublepage
-  \thispagestyle{empty}
-  \begin{center}
-      {\zihao{3}\songti \textbf{\UCAS@value@declare@create}}
-  \end{center}
+  \begin{spacing}{2.0}
+	  \zihao{4}\songti
+	  \cleardoublepage
+	  \thispagestyle{empty}
+	  \begin{center}
+		  {\zihao{3}\songti \textbf{\UCAS@value@declare@create}}
+	  \end{center}
 
-  \UCAS@value@declare@creativity
+	  \UCAS@value@declare@creativity
 
-  \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad} \\
+	  \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad} \\
 
-  %\vskip 20pt
+	  %\vskip 20pt
 
-  \begin{center}
-      {\zihao{3}\songti \textbf{\UCAS@value@declare@right}}
-  \end{center}
+	  \begin{center}
+		  {\zihao{3}\songti \textbf{\UCAS@value@declare@right}}
+	  \end{center}
 
-  \UCAS@value@declare@rights
-  
-  \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
-  
-  \hfill{} {\UCAS@value@declare@t \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
-  
+	  \UCAS@value@declare@rights
+	  
+	  \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
+	  
+	  \hfill{} {\UCAS@value@declare@t \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
+  \end{spacing}
   \clearpage
   \if@twoside
     \thispagestyle{empty}
