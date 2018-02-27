@@ -10,7 +10,7 @@
 
 ## 试用
 
-如果使用的是windows系统，首先安装TexLive环境。然后编译Thesis.tex文件。两种方法：
+如果使用的是windows系统，首先安装TexLive环境（如果使用CTEX，编译时可能出现“找不到CJKpunct.sty”）。然后编译Thesis.tex文件。两种方法：
 
 1. 双击Compile.bat，然后在Tmp中会生成Thesis.pdf中。
 2. 直接在Texmaker或WinEdit或Texworks等编辑器中编译，则在当前文件夹中生成Thesis.pdf。注意，在编辑器中编译可能需要4步才能生成最终的版本（pdfLatex->Bibtex->pdfLatex->pdfLatex）
@@ -26,7 +26,7 @@
 
 - 修改正文行间距为1.5倍行间距;
 - 修改目录显示深度为3层，可以显示章节x.x.x.x;
-- 修改Compile.bat的默认编译选项为pdfLatex。使用XeLatex编译①②③④⑤时无法显示。
+- 修改Compile.bat的默认编译选项为pdfLatex。使用XeLatex编译①②③④⑤时无法显示。（若非得使用XeLatex编译，可将Style文件夹下ucasthesis.cfg文件的96行中的①替换为{\large{\textcircled{\small{1}}}}，其他的数字以此类推）
 
 ### 2018-01-15
 
