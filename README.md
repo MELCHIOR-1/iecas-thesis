@@ -33,7 +33,7 @@
 如果遇到什么问题，可以查看README_ucasthesis.md文档和模版使用说明.pdf文档。
 
 建了个iecas-thesis模板使用交流群，也可以扫一扫下方的二维码，欢迎加群提问交流。
-![](https://github.com/MELCHIOR-1/iecas-thesis/tree/master/Img/QRcode.jpg)
+![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/QRcode.jpg)
 
 
 ## 修改日志
