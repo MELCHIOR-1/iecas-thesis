@@ -10,6 +10,10 @@
 
 ![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png)
 
+<div align=center><img width = "50%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png"/></div>
+
+
+
 ![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_2.png)
 
 ![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_3.png)
