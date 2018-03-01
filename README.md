@@ -8,11 +8,11 @@
 
 本模版按照电子所17年10月24日2018届毕业生动员会上PPT有关论文的要求（见下图）进行编写。对于PPT中未提到的格式，参考了所里前几届毕业生的论文格式。
 
-![](./Img/format_1.png)
+![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png)
 
-![](./Img/format_2.png)
+![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_2.png)
 
-![](./Img/format_3.png)
+![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_3.png)
 
 
 因莫晃锐的模板在2018年2月4日进行了显著改动，如果之前使用旧模版，建议的更新方式为`移植你的旧有文件到新模板中`:
@@ -22,7 +22,7 @@
         4. 替换 Img 文件夹
         5. 替换 Biblio/ref.bib
 
-		
+
 ## 试用
 
 如果使用的是windows系统，推荐安装TexLive环境（如果使用CTEX，编译时可能出现“找不到CJKpunct.sty”）。然后编译Thesis.tex文件。两种方法：
@@ -33,7 +33,7 @@
 如果遇到什么问题，可以查看README_ucasthesis.md文档和模版使用说明.pdf文档。
 
 建了个iecas-thesis模板使用交流群，也可以扫一扫下方的二维码，欢迎加群提问交流。
-![](./Img/QRcode.jpg)
+![](https://github.com/MELCHIOR-1/iecas-thesis/tree/master/Img/QRcode.jpg)
 
 
 ## 修改日志
