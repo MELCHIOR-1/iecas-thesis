@@ -8,15 +8,17 @@
 
 本模版按照电子所17年10月24日2018届毕业生动员会上PPT有关论文的要求（见下图）进行编写。对于PPT中未提到的格式，参考了所里前几届毕业生的论文格式。
 
-![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png)
-
-<div align=center><img width = "50%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png"/></div>
 
 
+<div align=center><img width = "60%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png"/>
 
-![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_2.png)
+<img width = "60%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_2.png"/>
 
-![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_3.png)
+<img width = "60%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_3.png"/>
+
+</div>
+
+
 
 
 因莫晃锐的模板在2018年2月4日进行了显著改动，如果之前使用旧模版，建议的更新方式为`移植你的旧有文件到新模板中`:
@@ -34,10 +36,16 @@
 1. 双击 artratex.bat，然后在 Tmp 文件夹中会生成Thesis.pdf中。
 2. 直接在Texmaker或WinEdit或Texworks等编辑器中编译，则在当前文件夹中生成Thesis.pdf，推荐使用pdfLaTeX排版。注意，在编辑器中编译可能需要4步才能生成最终的版本（pdfLatex->Bibtex->pdfLatex->pdfLatex）
 
+
+
 如果遇到什么问题，可以查看README_ucasthesis.md文档和模版使用说明.pdf文档。
 
 建了个iecas-thesis模板使用交流群，也可以扫一扫下方的二维码，欢迎加群提问交流。
-![](https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/QRcode.jpg)
+
+
+<div align=center><img width = "20%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/QRcode.jpg"/>
+
+</div>
 
 
 ## 修改日志
