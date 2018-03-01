@@ -19,6 +19,17 @@
 
 ## 修改日志
 
+### 2018-03-02
+- **ucasthesis作者莫晃锐在2月4日进行了重大更新**，对一些基础库和样式做了调整。此次iecas-thesis模版针对最新版的ucasthesis模版进行了重构。
+- 因模板改动显著，如果之前使用旧模版，建议的更新方式为`移植你的旧有文件到新模板中`:
+        1. 下载解压新模板
+        2. 替换 Tex 文件夹中的除 Frontpage.tex 以外的文件
+        3. 修改 Tex 文件夹中的 Frontpage.tex 条目信息
+        4. 替换 Img 文件夹
+        5. 替换 Biblio/ref.bib
+
+
+
 ### 2018-01-27
 - 为章节文件(Chap_Guide.tex 、Chap_Intro.tex)添加了“magic comments”，这样就可以在章节文件中直接编译整个工程。
 
