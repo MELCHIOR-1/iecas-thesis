@@ -56,6 +56,7 @@
 - 参考文献格式改为chinesebst-mod.bst，该文件从蒋成龙师兄的模版中复制过来，在此对蒋成龙师兄表示感谢！（ucasthesis中默认使用的是gbt7714-unsrt.bst文件，使用该样式英文参考文献中作者名称全是大写，若想改回这种样式，修改Style文件夹下的artratex.sty文件，将第205行 `\bibliographystyle{Biblio/chinesebst-mod}`改为`\bibliographystyle{Biblio/gbt7714-unsrt}`即可）
 - 将页脚的页码改为底下居中显示；
 - 新模板的摘要有页码，旧模板没有，师兄的论文中英文摘要部分是连续页码，新模板符合要求；
+- 感谢时宗洋同学提醒，修复了新版模版中附录字母序号不显示的问题；
 
 
 ### 2018-01-27
