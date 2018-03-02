@@ -54,6 +54,7 @@
 - **ucasthesis作者莫晃锐在2月4日进行了重大更新**，对一些基础库和样式做了调整。此次iecas-thesis模版针对最新版的ucasthesis模版进行了重构；
 - 根据电子所17年10月24日2018届毕业生动员会上PPT有关论文的要求进行了调整（主要为封面的调整）；
 - 参考文献格式改为chinesebst-mod.bst，该文件从蒋成龙师兄的模版中复制过来，在此对蒋成龙师兄表示感谢！（ucasthesis中默认使用的是gbt7714-unsrt.bst文件，使用该样式英文参考文献中作者名称全是大写，若想改回这种样式，修改Style文件夹下的artratex.sty文件，将第205行 `\bibliographystyle{Biblio/chinesebst-mod}`改为`\bibliographystyle{Biblio/gbt7714-unsrt}`即可）
+- 将页脚的页码改为底下居中显示；
 
 
 ### 2018-01-27
