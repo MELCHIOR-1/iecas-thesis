@@ -50,7 +50,19 @@
 
 ## 修改日志
 
+### 2018-03-04
+
+- 经过和师弟的讨论，发现使用XeLaTeX编译要比pdfLaTeX编译出来的文档要好看和方便，主要体现在以下几个方面：
+  1. pdfLaTeX编译出来的文档中如果汉字中夹杂着英文，可能导致文字超出行末，此时需要在中文和英文之间加上空格，而使用XeLaTeX编译则不会出现此问题；
+  2. 对于引用（`\cite{}'）中含有中文的情况，pdfLaTeX无法编译，而XeLaTeX可以编译；
+- 之前没有使用XeLaTeX的最大原因就是它比pdfLaTeX编译要慢很多。感谢时宗洋同学找到的解决方案：
+  1. 以管理员身份运行fc-cache
+  2. 在texlive安装路径bin/win32下，设置xelatex.exe以管理员身份启动。
+  3. 启动编辑器（如TeXworks）时以管理员身份启动
+- 修改默认编译器为XeLaTeX，将Style文件夹下ucasthesis.cfg文件的96行中的①替换为{\Large{\ding{172}}}，使在XeLaTeX编译的情况下能正确显示。
+
 ### 2018-03-02
+
 - **ucasthesis作者莫晃锐在2月4日进行了重大更新**，对一些基础库和样式做了调整。此次iecas-thesis模版针对最新版的ucasthesis模版进行了重构；
 - 根据电子所17年10月24日2018届毕业生动员会上PPT有关论文的要求进行了调整（主要为封面的调整）；
 - 参考文献格式改为chinesebst-mod.bst，该文件从蒋成龙师兄的模版中复制过来，在此对蒋成龙师兄表示感谢！（ucasthesis中默认使用的是gbt7714-unsrt.bst文件，使用该样式英文参考文献中作者名称全是大写，若想改回这种样式，修改Style文件夹下的artratex.sty文件，将第205行 `\bibliographystyle{Biblio/chinesebst-mod}`改为`\bibliographystyle{Biblio/gbt7714-unsrt}`即可）

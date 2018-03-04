@@ -12,7 +12,7 @@
 @rem ------------------------------------------------
 @rem ->> Set tex compiler
 @rem ------------------------------------------------
-set CompilerOrder="1"
+set CompilerOrder="2"
 @rem ------------------------------------------------
 if %CompilerOrder% == "1" (
 set CompileName="pdflatex"
