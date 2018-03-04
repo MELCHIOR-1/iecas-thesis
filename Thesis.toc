@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.3.3}图片插入}{6}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}参考文献引用}{9}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}常见使用问题}{10}{section.2.4}
-\contentsline {chapter}{\numberline {附录 \hspace {.3em}}中国科学院大学学位论文撰写要求}{15}{appendix.A}
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}中国科学院大学学位论文撰写要求}{15}{appendix.A}
 \contentsline {chapter}{参考文献}{17}{section*.12}
 \contentsline {chapter}{作者简历及攻读学位期间发表的学术论文与研究成果}{19}{appendix*.14}
 \contentsline {chapter}{致\hskip 1em\relax 谢}{21}{appendix*.21}

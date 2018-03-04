@@ -68,6 +68,9 @@
 %->> Required packages
 %---------------------------------------------------------------------------%
 \RequirePackage{ifxetex}% LaTeX engine detection
+%% math packages
+\RequirePackage{pifont}
+%% format packages
 \RequirePackage{setspace}
 %---------------------------------------------------------------------------%
 %->> Load class configuration
