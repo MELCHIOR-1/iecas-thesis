@@ -177,7 +177,6 @@
     %- <\upshape|\itshape|\scshape>: shape of font, default <\upshape>
     %- Roman or Serif - typefaces with strokes - for main content
     %- examples: Times New Roman, Garamond, Adobe Garamond Pro
-	%\setmainfont{Times New Roman}
     %\setmainfont{Garamond}[BoldFont=Garamond-Bold,ItalicFont=Garamond-Italic]%
     %- font switches: {\rmfamily ...}, \textrm{...}, {\normalfont ...}, \textnormal{...}
     %- the latter is due to \renewcommand*{\familydefault}{\rmdefault}
@@ -202,7 +201,7 @@
         \else
             \RequirePackage[square,comma,numbers,sort&compress]{natbib}% square bracket
         \fi
-        \bibliographystyle{Biblio/chinesebst-mod}% numbered scheme
+        \bibliographystyle{Biblio/gbt7714-unsrt}% numbered scheme
         \providecommand*{\citetns}[2][]{% text embedded \citet in superscripted mode
             \begingroup%
                 \let\NAT@mbox=\mbox%
@@ -256,8 +255,11 @@
 %-> Figure environment support
 %-
 \RequirePackage{graphicx}% packages for including graphics
-\RequirePackage[font=small,skip=8pt]{caption}% options: [margin=10pt,labelfont=bf]
+\RequirePackage[font=small,skip=8pt,labelsep=space]{caption}% options: [margin=10pt,labelfont=bf]
 \RequirePackage{subcaption}% package for subfigures
+\RequirePackage{bicaption}% package for binary captions
+\captionsetup[figure][bi-second]{name=Figure}% the second figure caption name
+\captionsetup[table][bi-second]{name=Table}% the second table caption name
 \RequirePackage[section]{placeins}% prevent floats from being moved over section
 %-
 %-> Page layout and spacing
@@ -307,7 +309,8 @@
 \ifARTRATEX@list% enable enhanced list and verbatim structures
     \RequirePackage{verbatim}% improve verbatim environment
     \RequirePackage{enumitem}% configure the enumerate environment
-    \RequirePackage{listings}% useful for algorithm and coding
+    \RequirePackage{listings}% source code
+    \RequirePackage{algpseudocode,algorithm,algorithmicx}% algorithm
 \fi
 %-
 %-> Math packages
@@ -317,6 +320,21 @@
     \RequirePackage{mathtools,amsfonts}%
 \fi
 %-
+
+%-> Add dots before eqnum
+\newcommand{\adddotsbeforeeqnnum}{\def\maketag@@@##1{\hbox{\m@th\normalfont\dots##1}}}
+\renewenvironment{equation}{%
+  \adddotsbeforeeqnnum
+  \incr@eqnum
+  \mathdisplay@push
+  \st@rredfalse \global\@eqnswtrue
+  \mathdisplay{equation}%
+}{%
+  \endmathdisplay{equation}%
+  \mathdisplay@pop
+  \ignorespacesafterend
+}
+
 %-> Links support
 %-
 \RequirePackage{hyperref}%
@@ -331,13 +349,15 @@
     pdffitwindow=false,% window fit to page when opened
     pdfstartview={FitH},% fits the width of the page to the window
     %pdfnewwindow=true,% links in new window
-    %colorlinks=true,% false: boxed links; true: colored links
-    %linkcolor=blue,% color of internal links
-    %citecolor=green,% color of links to bibliography
+    %backref=true,% do bibliographical back references
+    %pagebackref=true,% backreference by page number
+    colorlinks=true,% false: boxed links; true: colored links
+    linkcolor=black,% color of internal links
+    citecolor=blue,% color of links to bibliography
     %filecolor=magenta,% color of file links
-    %urlcolor=cyan,% color of external links
+    urlcolor=red,% color of external links
     bookmarksnumbered=true,% put section numbers in bookmarks
-    hidelinks% remove link color and border
+    %hidelinks% remove link color and border
 }
 %---------------------------------------------------------------------------%
 %->> Configuration command
@@ -358,11 +378,11 @@
 %-> Layout, space, and style
 %-
 \ifARTRATEX@geometry% enable geometry to redefine page layout
-    \geometry{paper=a4paper,left=25mm,right=24mm,top=45mm,bottom=5mm}%
+    \geometry{paper=a4paper,left=31.7mm,right=31.7mm,top=25.4mm,bottom=25.4mm}%
 \fi
-\linespread{1.5}% 1.5 for "one and a half" line spacing, and 2.0 for "double" line spacing
+%\linespread{1.5}% 1.5 for "one and a half" line spacing, and 2.0 for "double" line spacing
 %\setlength{\parskip}{0.5ex plus 0.25ex minus 0.25ex}% skip space a paragraph
-\setcounter{tocdepth}{3}% depth for the table of contents
+\setcounter{tocdepth}{2}% depth for the table of contents
 \setcounter{secnumdepth}{3}% depth for section numbering, default is 2(subsub)
 %- Set equation, figure, table numbering
 %\numberwithin{equation}{section}% set enumeration level
@@ -425,8 +445,8 @@
         \fancyhf{}% clear fields
         \fancyhead[CE]{\footnotesize \@title}% structure elements
         \fancyhead[CO]{\footnotesize \CTEXthechapter\ \leftmark}% structure elements
-        \fancyfoot[CE]{\footnotesize \thepage}% page number
-        \fancyfoot[CO]{\footnotesize \thepage}% page number
+        \fancyfoot[LE]{\footnotesize \thepage}% page number
+        \fancyfoot[RO]{\footnotesize \thepage}% page number
         \renewcommand{\headrulewidth}{0.8pt}% header rule
         \renewcommand{\footrulewidth}{0pt}% footer rule
     }
@@ -434,8 +454,8 @@
         \fancyhf{}% clear fields
         \fancyhead[CE]{\footnotesize \@title}% structure elements
         \fancyhead[CO]{\footnotesize \leftmark}% structure elements
-        \fancyfoot[CE]{\footnotesize \thepage}% page number
-        \fancyfoot[CO]{\footnotesize \thepage}% page number
+        \fancyfoot[LE]{\footnotesize \thepage}% page number
+        \fancyfoot[RO]{\footnotesize \thepage}% page number
         \renewcommand{\headrulewidth}{0.8pt}% header rule
         \renewcommand{\footrulewidth}{0pt}% footer rule
     }

@@ -6,22 +6,10 @@
 
 本项目初始fork的github上莫晃锐写的最新的国科大论文模版[ucasthesis](https://github.com/mohuangrui/ucasthesis)，在此基础上，针对中科院电子所的学位论文特点，做了些修改。形成适用于电子所学位论文的模版iecas-thesis.
 
-本模版按照电子所17年10月24日2018届毕业生动员会上PPT有关论文的要求（见下图）进行编写。对于PPT中未提到的格式，参考了所里前几届毕业生的论文格式。
 
 
 
-<div align=center><img width = "60%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_1.png"/>
-
-<img width = "60%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_2.png"/>
-
-<img width = "60%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/format_3.png"/>
-
-</div>
-
-
-
-
-因莫晃锐的模板在2018年2月4日进行了显著改动，如果之前使用旧模版，建议的更新方式为`移植你的旧有文件到新模板中`:
+因莫晃锐的模板在2018年3月13日进行了显著改动，如果之前使用旧模版，建议的更新方式为`移植你的旧有文件到新模板中`:
         1. 下载解压新模板
         2. 替换 Tex 文件夹中的除 Frontpage.tex 以外的文件
         3. 修改 Tex 文件夹中的 Frontpage.tex 条目信息
@@ -31,7 +19,9 @@
 
 ## 试用
 
-如果使用的是windows系统，推荐安装TexLive环境（如果使用CTEX，编译时可能出现“找不到CJKpunct.sty”）。然后编译Thesis.tex文件。两种方法：
+如果使用的是windows系统，推荐安装TexLive环境（如果使用CTEX套装，默认与WinEditor搭配，编译时可能出现“找不到CJKpunct.sty”，请勿混淆CTEX套装与ctex宏包，CTEX套装是集成了许多LATEX组件的LATEX编译系统，因已停止维护，**不建议使用**）。可以使用TexLive编译，WinEditor编辑哟。
+
+然后编译Thesis.tex文件。两种方法：
 
 1. 双击 artratex.bat，然后在 Tmp 文件夹中会生成Thesis.pdf中。
 2. 直接在Texmaker或WinEdit或Texworks等编辑器中编译，则在当前文件夹中生成Thesis.pdf，推荐使用pdfLaTeX排版。注意，在编辑器中编译可能需要4步才能生成最终的版本（pdfLatex->Bibtex->pdfLatex->pdfLatex）
@@ -40,14 +30,25 @@
 
 如果遇到什么问题，可以查看README_ucasthesis.md文档和模版使用说明.pdf文档。
 
-建了个iecas-thesis模板使用交流群，也可以扫一扫下方的二维码，欢迎加群提问交流。
 
 
-<div align=center><img width = "20%" src="https://github.com/MELCHIOR-1/iecas-thesis/raw/master/Img/QRcode.jpg"/>
 
-</div>
 
 ## 修改日志
+
+### 2018-03-15
+
+国科大出了新模版，今年电子所也要按照国科大的来，格式大变，所以请大家忽略之前的修改日志。哼哧哼哧几十年，一夜回到解放前 (┬＿┬)
+
+下载了莫晃锐的最新模版，在此基础上进行了修正。
+
+- 按照要求，将英文关键字“Keywords”改为“Key Words”；
+- 按照要求，重写了公式样式，新的公式中公式编号前面会有三个点（第一次遇见这种样式）；
+- 按照要求，将图表标题改成中英双标题，中文在上，英文在下。
+  - 对于双标题，在代码中将`\caption{中文}`改成`\bicaption{中文}{English}`就可以了。
+  - 图片标题位于图片下方，因此`\bicaption`应该在`\includegraphics`的下方；
+  - 表格标题位于图片上方，因此`\bicaption`应该在`\includegraphics`的上方；
+- 按照要求，参考文献格式改成作者+年份的格式，具体为在thesis.tex中25行改为`\usepackage[super,myhdr,list,authoryear]{Style/artratex}% document settings`
 
 ### 2018-03-06
 

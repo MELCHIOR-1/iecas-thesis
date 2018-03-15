@@ -11,7 +11,7 @@
 %---------------------------------------------------------------------------%
 %->> Document class declaration
 %---------------------------------------------------------------------------%
-\documentclass[doublesided]{Style/ucasthesis}%
+\documentclass[doublesided,fontset=fandol]{Style/ucasthesis}%
 %- Multiple optional arguments:
 %- [<singlesided|doublesided|printcopy>]% set one or two sided eprint or print
 %- [showmj]% show confidential information
@@ -22,7 +22,7 @@
 %---------------------------------------------------------------------------%
 %->> Document settings
 %---------------------------------------------------------------------------%
-\usepackage[super,myhdr]{Style/artratex}% document settings
+\usepackage[super,myhdr,list,authoryear]{Style/artratex}% document settings
 %- usage: \usepackage[option1,option2,...,optionN]{artratex}
 %- Multiple optional arguments:
 %- [bibtex|biber]% set bibliography processor and package
@@ -54,12 +54,15 @@
 %-
 \frontmatter% initialize the environment
 \input{Tex/Frontpages}% title page, abstract, dedication
+{% content list region
+\linespread{1.2}% local line space
 %\intotoc{\contentsname}% add link to contents table and bookmark
 \tableofcontents% contents catalog
 %\intotoc{\listfigurename}% add link to contents table and bookmark
 %\listoffigures% figures catalog
 %\intotoc{\listtablename}% add link to contents table and bookmark
 %\listoftables% tables catalog
+}
 \input{Tex/Prematter}% list of symbols, preface content
 %-
 %-> Mainmatter

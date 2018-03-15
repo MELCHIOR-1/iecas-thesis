@@ -68,10 +68,6 @@
 %->> Required packages
 %---------------------------------------------------------------------------%
 \RequirePackage{ifxetex}% LaTeX engine detection
-%% math packages
-\RequirePackage{pifont}
-%% format packages
-\RequirePackage{setspace}
 %---------------------------------------------------------------------------%
 %->> Load class configuration
 %---------------------------------------------------------------------------%
@@ -85,31 +81,34 @@
 %---------------------------------------------------------------------------%
 %- part one -- horizontal widths
 %- left side width + textwidth + right side width = paperwidth
-%- left side width of [odd, even] page = [odd, even]sidemargin + 1.0in (fixed) + hoffset
 %- binding side width + textwidth + nonbinding side width = paperwidth
 %- binding side width of [odd, even] page = [left, right] side width
+%- left side width of [odd, even] page = 1.0in (fixed) + hoffset + [odd, even]sidemargin
 %- assuming A4 paper (210mm x 297mm)
-\setlength{\textwidth}{150mm}% set required text width first
+\setlength{\textwidth}{146.6mm}% set required text width first
+\setlength{\hoffset}{0mm}% set horizontal offset
 \ifUCAS@printcopy% if print copy layout enabled
-    \setlength{\oddsidemargin}{10mm}% binding side width
+    \setlength{\oddsidemargin}{12.6mm}% binding side margin
     \setlength{\evensidemargin}{0mm}% ensure uniform binding side width for printing
 \else
-    \setlength{\oddsidemargin}{5mm}% left side width
-    \setlength{\evensidemargin}{5mm}% ensure uniform left side width for EThesis
+    \setlength{\oddsidemargin}{6.3mm}% left side margin
+    \setlength{\evensidemargin}{6.3mm}% ensure uniform left side width for EThesis
 \fi
-%- set margin for notes to zero
-\setlength{\marginparwidth}{0pt}% width of margin notes
-\setlength{\marginparsep}{0pt}% width of space between body text and margin notes
+\setlength{\marginparwidth}{35pt}% width of margin notes
+\setlength{\marginparsep}{10pt}% width of space between body text and margin notes
 %- part two -- vertical heights
 %- top height + textheight + bottom height = paperheight
 %- top height = 1.0in (fixed) + voffset + topmargin + headheight + headsep 
-\setlength{\textheight}{240mm}% set required text height first
-\setlength{\voffset}{-20mm}% set a minimum header height
-\setlength{\headheight}{15pt}% set a minimum header height
+\setlength{\textheight}{246.2mm}% set required text height first
+\setlength{\voffset}{-17.4mm}% set vertical offset
+\setlength{\topmargin}{20pt}% vertical margin above header
+\setlength{\headheight}{12pt}% header height
+\setlength{\headsep}{17.5pt}% vertical margin between header and body text
+\setlength{\footskip}{29.5pt}% vertical margin between footer and body text
 %- specifies the amount of space between paragraphs.
 \setlength{\parskip}{0.5ex plus 0.25ex minus 0.25ex}
 %- line spacing
-\linespread{1.3}% line space setting
+\linespread{1.5}% line space setting
 \raggedbottom% prevent adding vertical white space in strange places
 %- default pagestyle is page number at bottom without headers and footers
 \pagestyle{plain}
@@ -132,7 +131,7 @@
 \newcommand{\ulenhance}[2][1pt]{% enhanced underline
     \def\ULthickness{#1}% set thickness
     \uline{#2}}
-\newcommand{\ulhshift}{-3em}% horizontal shift on underline
+\newcommand{\ulhshift}{-4em}% horizontal shift on underline
 \newcommand{\ulextend}[2][350pt]{% extend underline length
     \hbox to #1{\hfill\hspace*{\ulhshift}#2\hfill}}
 %---------------------------------------------------------------------------%
@@ -163,6 +162,7 @@
     \cleardoublepage
     \thispagestyle{empty}
     \begin{center}
+        \linespread{1.5}
         \zihao{4}\bfseries
         \ifUCAS@mjinfo
             \hfill{} {\UCAS@label@confidential \ulenhance{\ulextend[50pt]{\hspace*{-\ulhshift}\zihao{5}\UCAS@value@confidential}}}
@@ -174,19 +174,19 @@
 
         {\UCAS@value@schoollogo}
 
-        \vspace*{\stretch{4}}
+        \vspace*{\stretch{2}}
 
-        {\zihao{1}\bfseries\sffamily 
-		{\UCAS@value@degree\UCAS@label@thesis}}
+        %{\zihao{1}\bfseries\sffamily \ulenhance[2.5pt]{\UCAS@value@degree\UCAS@label@thesis}}
+        {\zihao{1}\bfseries\sffamily {\UCAS@value@degree\UCAS@label@thesis}}
 
-        \vspace*{\stretch{4}}
+        \vspace*{\stretch{3}}
 
-        {\zihao{-3}\bfseries\sffamily {\ \UCAS@value@title\ }}
+        {\zihao{-3}\bfseries\sffamily \ulenhance[1.5pt]{\ \UCAS@value@title\ }}
 
-        \vspace*{\stretch{6}}
+        \vspace*{\stretch{3}}
 
         \def\tabcolsep{1pt}
-        \def\arraystretch{1.4}
+        \def\arraystretch{1.3}
         \begin{tabular}{lc}
             \UCAS@label@author & \ulenhance[1.2pt]{\ulextend{\UCAS@value@author}}\\
             \UCAS@label@advisor & \ulenhance[1.2pt]{\ulextend{\UCAS@value@advisor}}\\
@@ -196,11 +196,11 @@
             \UCAS@label@institute & \ulenhance[1.2pt]{\ulextend{\UCAS@value@institute}}\\
         \end{tabular}
 
-        \vspace*{\stretch{6}}
+        \vspace*{\stretch{4.5}}
 
         {\UCAS@value@chinesedate}
 
-        %\vspace*{\stretch{3}}
+        \vspace*{\stretch{3.5}}
     \end{center}
     \clearpage
     \if@twoside
@@ -243,20 +243,32 @@
     \cleardoublepage
     \thispagestyle{empty}
     \begin{center}
-        \zihao{3}\bfseries
-        \vspace*{20pt}
+        \linespread{1.5}
+        \zihao{4}\bfseries
+
+        \vspace*{50pt}
+
         {\zihao{-3}\bfseries \ulenhance[1.5pt]{\ \UCAS@value@englishtitle\ }}
-        \vskip \stretch{1.5}		
-		{By} \\		
-		{\UCAS@value@englishauthor}
-		\vskip \stretch{1}
-		\zihao{4}\bfseries
-        {\UCAS@label@englishstatement}   
-        \vskip 70pt
+
+        \vspace*{\stretch{2}}
+
+        {\UCAS@label@englishstatement}
+
+        {By}
+
+        {\UCAS@value@englishauthor}
+
+        {\UCAS@value@englishadvisor}
+
+        \vspace*{\stretch{3}}
+
         {\UCAS@value@englishinstitute}
-        \vskip 20pt
+
+        \vspace*{\stretch{1}}
+
         {\UCAS@value@englishdate}
-        %\vspace*{\stretch{3}}
+
+        \vspace*{\stretch{3}}
     \end{center}
     \clearpage
     \if@twoside
@@ -268,32 +280,44 @@
 %->> Author's declaration
 %---------------------------------------------------------------------------%
 \newcommand{\makedeclaration}{%
-	\begin{spacing}{2.0}
-	\zihao{4}
     \cleardoublepage
     \thispagestyle{empty}
     {
-		
+        \linespread{1.5}
+        \zihao{-4}
+
+        \vspace*{2ex}
+
         \begin{center}
-            {\zihao{3}\bfseries\sffamily \UCAS@value@declare@create}
+            {\zihao{4}\bfseries\sffamily \UCAS@value@declare@create}
         \end{center}
 
         {\UCAS@value@declare@creativity}
 
-        \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad} \\
+        \vspace*{3ex}
+
+        {\hfill{} {\UCAS@value@declare@s \hspace*{14em}}}
+
+        {\hfill{} {\UCAS@value@declare@d \hspace*{14em}}}
+
+        \vspace*{6ex}
 
         \begin{center}
-            {\zihao{3}\bfseries\sffamily \UCAS@value@declare@right}
+            {\zihao{4}\bfseries\sffamily \UCAS@value@declare@right}
         \end{center}
 
         {\UCAS@value@declare@rights}
 
-        \hfill{} {\UCAS@value@declare@s \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
-	  
-		\hfill{} {\UCAS@value@declare@t \hspace{70pt} \ \ \UCAS@value@declare@d \hspace{70pt}\quad}
-	
+        {\UCAS@value@declare@rule}
+
+        \vspace*{3ex}
+
+        {\hfill{} {\UCAS@value@declare@s \hspace*{10em} \UCAS@value@declare@t \hspace*{9em}}}
+
+        {\hfill{} {\UCAS@value@declare@d \hspace*{10em} \UCAS@value@declare@d \hspace*{9em}}}
+
+        \vspace*{3ex}
     }
-	\end{spacing}
     \clearpage
     \if@twoside
         \thispagestyle{empty}
