@@ -38,6 +38,10 @@
 
 ## 修改日志
 
+### 2018-03-17
+
+- 发现格式要求里与GB7714-2015格式并不一样，所以修改了`.bst`文件，为了跟标准文件区别开来，将文件改为`iecas-plain.bst`，并修改了`artratex.sty`中的第230行，改为默认使用iecas-plain.bst文件：`        \bibliographystyle{Biblio/iecas-plain}% author year scheme`
+
 ### 2018-03-15
 
 国科大出了新模版，今年电子所也要按照国科大的来，格式大变，所以请大家忽略之前的修改日志。哼哧哼哧几十年，一夜回到解放前 (┬＿┬)
@@ -45,12 +49,22 @@
 下载了莫晃锐的最新模版，在此基础上进行了修正。
 
 - 按照要求，将英文关键字“Keywords”改为“Key Words”；
+
 - 按照要求，重写了公式样式，新的公式中公式编号前面会有三个点（第一次遇见这种样式）；
-- 按照要求，将图表标题改成中英双标题，中文在上，英文在下。
-  - 对于双标题，在代码中将`\caption{中文}`改成`\bicaption{中文}{English}`就可以了。
+
+- 按照要求，将图表标题改成中英双标题，中文在上，英文在下；
+  - 对于双标题，在代码中将`\caption{中文}`改成`\bicaption{中文}{English}`就可以了；
   - 图片标题位于图片下方，因此`\bicaption`应该在`\includegraphics`的下方；
-  - 表格标题位于图片上方，因此`\bicaption`应该在`\includegraphics`的上方；
+  - 表格标题位于表格上方，因此`\bicaption`应该在`tabular`的上方；
+
 - 按照要求，参考文献格式改成作者+年份的格式，具体为在thesis.tex中25行改为`\usepackage[super,myhdr,list,authoryear]{Style/artratex}% document settings`
+
+- 根据《中国人名汉语拼音字母拼写规则》（GB/T 28039—2011），英文封面中的姓和名分写，**姓在前，名在后，姓名之间用空格分开。姓和名需写全拼，开头字母大写**；
+
+- 注释掉`ucasthesis.cfg`第144行，使附录按照 附录A，附录B 编号；
+
+  ​
+
 
 ### 2018-03-06
 
