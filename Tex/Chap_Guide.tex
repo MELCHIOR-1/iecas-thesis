@@ -93,6 +93,37 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
 
 数学公式常用命令请见 \href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{WiKibook Mathematics}。artracom.sty中对一些常用数据类型如矢量矩阵等进行了封装，这样的好处是如有一天需要修改矢量的显示形式，只需单独修改artracom.sty中的矢量定义即可实现全文档的修改。
 
+\newpage
+对于多个连续的公式，如果使用连续的equation环境，中间会有很大的空隙，如使用下面命令：
+\begin{verbatim}
+\begin{equation}
+	a+b=c
+\end{equation}
+\begin{equation}
+	c+d=e
+\end{equation}
+\end{verbatim} 
+编译后就是这样：
+\begin{equation}
+	a+b=c
+\end{equation}
+\begin{equation}
+	c+d=e
+\end{equation}
+而使用gather环境后，
+\begin{verbatim}
+\begin{gather}
+	a+b=c\\
+	c+d=e
+\end{gather} 
+\end{verbatim} 
+编译后就是这样：
+\begin{gather}
+	a+b=c\\
+	c+d=e
+\end{gather} 
+
+
 \subsection{表格}
 
 请见表~\ref{tab:sample}。制表的更多范例，请见 \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{WiKibook Tables}。

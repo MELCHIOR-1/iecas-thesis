@@ -38,6 +38,10 @@
 
 ## 修改日志
 
+### 2018-03-19
+
+- 解决了连续公式之间间隔太大的问题。重写了gather环境，多个连续公式时请使用`\begin{gather}`代替`\begin{equation}`。
+
 ### 2018-03-17
 
 - 发现格式要求里与GB7714-2015格式并不一样，所以修改了`.bst`文件，为了跟标准文件区别开来，将文件改为`iecas-plain.bst`，并修改了`artratex.sty`中的第230行，改为默认使用iecas-plain.bst文件：`        \bibliographystyle{Biblio/iecas-plain}% author year scheme`

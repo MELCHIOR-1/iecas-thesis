@@ -335,6 +335,14 @@
   \ignorespacesafterend
 }
 
+\renewenvironment{gather}{%
+  \adddotsbeforeeqnnum
+  \start@gather\st@rredfalse
+}{%
+  \math@cr \black@\totwidth@ \egroup
+  $$\ignorespacesafterend
+}
+
 %-> Links support
 %-
 \RequirePackage{hyperref}%
