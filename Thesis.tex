@@ -73,14 +73,14 @@
 %-> Appendix
 %-
 \cleardoublepage%
+\intotoc{\bibname}% add link to contents table and bookmark
+\bibliography{Biblio/ref}% bibliography
 \appendix% initialize the environment
 \input{Tex/Appendix}% appendix content
 %-
 %-> Backmatter: bibliography, glossary, index
 %-
 \backmatter% initialize the environment
-\intotoc{\bibname}% add link to contents table and bookmark
-\bibliography{Biblio/ref}% bibliography
 \input{Tex/Backmatter}% other information
 \end{document}
 %---------------------------------------------------------------------------%
