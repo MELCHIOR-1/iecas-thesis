@@ -396,6 +396,44 @@
         \endgroup
     \fi
 }
+
+\renewcommand*{\l@section}[2]{% [<title>,<page>]
+    \ifnum \c@tocdepth >\m@ne
+        \addpenalty{-\@highpenalty}%
+        \setlength\@tempdima{0.5em}%
+        \begingroup
+            \parindent \z@ \rightskip \@pnumwidth
+            \parfillskip -\@pnumwidth
+            \leavevmode \zihao{-4}\sffamily
+            \advance\leftskip\@tempdima
+            \hskip \leftskip
+            #1\nobreak
+            \leaders\hbox{$\m@th\mkern \@dotsep \cdot\mkern \@dotsep$}% add dotted toc line
+            \hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+            \penalty\@highpenalty
+        \endgroup
+    \fi
+}
+
+\renewcommand*{\l@subsection}[2]{% [<title>,<page>]
+    \ifnum \c@tocdepth >\m@ne
+        \addpenalty{-\@highpenalty}%
+
+        \setlength\@tempdima{1em}%
+        \begingroup
+            \parindent \z@ \rightskip \@pnumwidth
+            \parfillskip -\@pnumwidth
+            \leavevmode \zihao{-4}\sffamily
+            \advance\leftskip\@tempdima
+            \hskip \leftskip
+            #1\nobreak
+            \leaders\hbox{$\m@th\mkern \@dotsep \cdot\mkern \@dotsep$}% add dotted toc line
+            \hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+            \penalty\@highpenalty
+        \endgroup
+    \fi
+}
+
 %---------------------------------------------------------------------------%
 \endinput
 

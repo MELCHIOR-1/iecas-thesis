@@ -177,6 +177,7 @@
     %- <\upshape|\itshape|\scshape>: shape of font, default <\upshape>
     %- Roman or Serif - typefaces with strokes - for main content
     %- examples: Times New Roman, Garamond, Adobe Garamond Pro
+	\setmainfont{Times New Roman}
     %\setmainfont{Garamond}[BoldFont=Garamond-Bold,ItalicFont=Garamond-Italic]%
     %- font switches: {\rmfamily ...}, \textrm{...}, {\normalfont ...}, \textnormal{...}
     %- the latter is due to \renewcommand*{\familydefault}{\rmdefault}
@@ -255,9 +256,9 @@
 %-> Figure environment support
 %-
 \RequirePackage{graphicx}% packages for including graphics
-\RequirePackage[font=small,skip=8pt,labelsep=space]{caption}% options: [margin=10pt,labelfont=bf]
+\RequirePackage[font=small,labelfont=bf,skip=8pt,labelsep=space,justification=centering]{caption}% options: [margin=10pt,labelfont=bf]
 \RequirePackage{subcaption}% package for subfigures
-\RequirePackage{bicaption}% package for binary captions
+\RequirePackage[list=off]{bicaption}% package for binary captions
 \captionsetup[figure][bi-second]{name=Figure}% the second figure caption name
 \captionsetup[table][bi-second]{name=Table}% the second table caption name
 \RequirePackage[section]{placeins}% prevent floats from being moved over section
