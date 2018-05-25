@@ -18,7 +18,6 @@
         4. 替换 Img 文件夹
         5. 替换 Biblio/ref.bib
 
-
 ## 试用
 
 如果使用的是windows系统，推荐安装TexLive环境（如果使用CTEX套装，默认与WinEditor搭配，编译时可能出现“找不到CJKpunct.sty”，请勿混淆CTEX套装与ctex宏包，CTEX套装是集成了许多LATEX组件的LATEX编译系统，因已停止维护，**不建议使用**）。可以使用TexLive编译，WinEditor编辑哟。
@@ -37,6 +36,13 @@
 
 
 ## 修改日志
+
+### 2018-05-25
+
+- 修改默认英文字体为Time New Romans，中文字体为 宋体。
+- 对于 Time New Romans 和 宋体，使用的是系统自带的字体。
+- 修正了宋体加粗显示不正常的问题。
+- 默认文献格式改为 序号格式。
 
 ### 2018-03-24
 

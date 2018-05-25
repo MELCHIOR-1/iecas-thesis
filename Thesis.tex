@@ -22,7 +22,7 @@
 %---------------------------------------------------------------------------%
 %->> Document settings
 %---------------------------------------------------------------------------%
-\usepackage[super,myhdr,list,authoryear]{Style/artratex}% document settings
+\usepackage[super,myhdr,list]{Style/artratex}% document settings
 %- usage: \usepackage[option1,option2,...,optionN]{artratex}
 %- Multiple optional arguments:
 %- [bibtex|biber]% set bibliography processor and package
@@ -48,6 +48,9 @@
 %---------------------------------------------------------------------------%
 %->> Document content
 %---------------------------------------------------------------------------%
+\usepackage{setspace}
+\usepackage[font={onehalfspacing,small}]{caption}
+
 \begin{document}
 %-
 %-> Frontmatter: title page, abstract, content list, symbol list, preface
@@ -55,7 +58,7 @@
 \frontmatter% initialize the environment
 \input{Tex/Frontpages}% title page, abstract, dedication
 {% content list region
-\linespread{1.2}% local line space
+%\linespread{1.2}% local line space
 %\intotoc{\contentsname}% add link to contents table and bookmark
 \tableofcontents% contents catalog
 %\intotoc{\listfigurename}% add link to contents table and bookmark

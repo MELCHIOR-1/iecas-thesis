@@ -1,3 +1,7 @@
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX+BibTeX+XeLaTeX+XeLaTeX
+% !TeX root = ../Thesis.tex
+% !TeX spellcheck = None
 
 \chapter{使用简介}
 \label{chap:guide}
@@ -93,6 +97,7 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
 
 数学公式常用命令请见 \href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{WiKibook Mathematics}。artracom.sty中对一些常用数据类型如矢量矩阵等进行了封装，这样的好处是如有一天需要修改矢量的显示形式，只需单独修改artracom.sty中的矢量定义即可实现全文档的修改。
 
+
 \newpage
 对于多个连续的公式，如果使用连续的equation环境，中间会有很大的空隙，如使用下面命令：
 \begin{verbatim}
@@ -159,10 +164,16 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
     \label{fig:tc_q_criteria}
 \end{figure}
 
+%\begin{spacing}{2.0}
+%\begin{equation}
+%a+b=c1111
+%\end{equation}
+%\end{spacing}
+
 如果插图的空白区域过大，以图片\verb|shock_cyn|为例，自动裁剪如图\ref{fig:shock_cyn}。
 \begin{figure}[!htbp]
     \centering
-     \bicaption{激波圆柱作用。}{Shock-cylinder interaction.}
+     \bicaption{激波圆柱作用，激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用。}{Shock-cylinder interaction.}
     %trim option's parameter order: left bottom right top
     \includegraphics[trim = 30mm 0mm 30mm 0mm, clip, width=0.40\textwidth]{shock_cyn}
    

@@ -178,6 +178,7 @@
     %- Roman or Serif - typefaces with strokes - for main content
     %- examples: Times New Roman, Garamond, Adobe Garamond Pro
 	\setmainfont{Times New Roman}
+	\setCJKmainfont[AutoFakeBold={2.17}]{SimSun}
     %\setmainfont{Garamond}[BoldFont=Garamond-Bold,ItalicFont=Garamond-Italic]%
     %- font switches: {\rmfamily ...}, \textrm{...}, {\normalfont ...}, \textnormal{...}
     %- the latter is due to \renewcommand*{\familydefault}{\rmdefault}
@@ -202,7 +203,7 @@
         \else
             \RequirePackage[square,comma,numbers,sort&compress]{natbib}% square bracket
         \fi
-        \bibliographystyle{Biblio/gbt7714-unsrt}% numbered scheme
+        \bibliographystyle{Biblio/iecas-numerical}% numbered scheme
         \providecommand*{\citetns}[2][]{% text embedded \citet in superscripted mode
             \begingroup%
                 \let\NAT@mbox=\mbox%
