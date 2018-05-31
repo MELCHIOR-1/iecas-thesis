@@ -337,7 +337,7 @@
 %->> Configure table of contents
 %---------------------------------------------------------------------------%
 %- define spacing and length
-\def\@dotsep{1.5mu}% spacing for dots
+\def\@dotsep{1mu}% spacing for dots
 \def\@pnumwidth{2em}% spacing between titles and page numbers
 \def\@tocrmarg{2em}% right margin indentation
 \def\@chaptervspace{1ex}% spacing between chapter titles
@@ -419,7 +419,7 @@
     \ifnum \c@tocdepth >\m@ne
         \addpenalty{-\@highpenalty}%
 
-        \setlength\@tempdima{1em}%
+        \setlength\@tempdima{1.5em}%
         \begingroup
             \parindent \z@ \rightskip \@pnumwidth
             \parfillskip -\@pnumwidth
@@ -433,6 +433,13 @@
         \endgroup
     \fi
 }
+
+
+%---------------------------------------------------------------------------%
+%->> Configure list of figures and tables
+%---------------------------------------------------------------------------%
+\addtocontents{lof}{\protect\renewcommand*\protect\addvspace[1]{}}
+\addtocontents{lot}{\protect\renewcommand*\protect\addvspace[1]{}}
 
 %---------------------------------------------------------------------------%
 \endinput

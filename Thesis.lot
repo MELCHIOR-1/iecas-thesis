@@ -1,6 +1,7 @@
+\renewcommand *\addvspace [1]{}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {2.1}{\ignorespaces 这是一个样表。\relax }}{7}{table.caption.10}
+\contentsline {table}{\numberline {2.1}{\ignorespaces 这是一个样表\relax }}{7}{table.caption.6}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}

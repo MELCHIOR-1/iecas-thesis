@@ -48,8 +48,18 @@
 %---------------------------------------------------------------------------%
 %->> Document content
 %---------------------------------------------------------------------------%
-\usepackage{setspace}
-\usepackage[font={onehalfspacing,small}]{caption}
+%\usepackage{setspace}
+%\usepackage[font={onehalfspacing,small}]{caption}
+
+% 设置计数器
+\newcounter{mycnt}
+
+% 设置计数器默认值为 0
+\setcounter{mycnt}{0}
+
+% 设置计数器按照阿拉伯数字计数
+\newcommand{\stepaddpaper}{\stepcounter{mycnt}{[\arabic{mycnt}] \ }}
+
 
 \begin{document}
 %-
@@ -58,15 +68,21 @@
 \frontmatter% initialize the environment
 \input{Tex/Frontpages}% title page, abstract, dedication
 {% content list region
-%\linespread{1.2}% local line space
+\linespread{1.2}% local line space
 %\intotoc{\contentsname}% add link to contents table and bookmark
 \tableofcontents% contents catalog
-%\intotoc{\listfigurename}% add link to contents table and bookmark
-\listoffigures% figures catalog
-%\intotoc{\listtablename}% add link to contents table and bookmark
+}
+
+{
+\linespread{1.5}
+\let\oldnumberline \numberline
+\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\figurename~\oldnumberline}
+\listoffigures%
+\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\tablename~\oldnumberline}
 \listoftables% tables catalog
 }
-\input{Tex/Prematter}% list of symbols, preface content
+
+%\input{Tex/Prematter}% list of symbols, preface content
 %-
 %-> Mainmatter
 %-

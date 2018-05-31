@@ -137,7 +137,7 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
     \footnotesize% fontsize
     \setlength{\tabcolsep}{4pt}% column separation
     \renewcommand{\arraystretch}{1.2}%row space 
-    \bicaption{这是一个样表。}{This is a sample table.}
+    \bicaption{这是一个样表}{This is a sample table}
     \begin{tabular}{lcccccccc}
         \hline
         Row number & \multicolumn{8}{c}{This is a multicolumn} \\
@@ -160,7 +160,7 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.40\textwidth]{tc_q_criteria}
-    \bicaption{Q判据等值面图。}{Isocontour of Q criteria.}
+    \bicaption{Q判据等值面图}{Isocontour of Q criteria}
     \label{fig:tc_q_criteria}
 \end{figure}
 
@@ -171,14 +171,7 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
 %\end{spacing}
 
 如果插图的空白区域过大，以图片\verb|shock_cyn|为例，自动裁剪如图\ref{fig:shock_cyn}。
-\begin{figure}[!htbp]
-    \centering
-     \bicaption{激波圆柱作用，激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用激波圆柱作用。}{Shock-cylinder interaction.}
-    %trim option's parameter order: left bottom right top
-    \includegraphics[trim = 30mm 0mm 30mm 0mm, clip, width=0.40\textwidth]{shock_cyn}
-   
-    \label{fig:shock_cyn}
-\end{figure}
+
 
 多图的插入如图\ref{fig:oaspl}。
 \begin{figure}[!htbp]
