@@ -283,15 +283,17 @@
     \cleardoublepage
     \thispagestyle{empty}
     {
-        \linespread{1.5}
+        \linespread{1.6}
         \zihao{-4}
-
-        \vspace*{2ex}
+		\songti
+        \vspace*{1ex}
 
         \begin{center}
             {\zihao{4}\bfseries\sffamily \UCAS@value@declare@create}
         \end{center}
-
+		
+		\vspace*{2ex}
+		
         {\UCAS@value@declare@creativity}
 
         \vspace*{3ex}
@@ -300,13 +302,15 @@
 
         {\hfill{} {\UCAS@value@declare@d \hspace*{14em}}}
 
-        \vspace*{6ex}
+        \vspace*{12ex}
 
         \begin{center}
             {\zihao{4}\bfseries\sffamily \UCAS@value@declare@right}
         \end{center}
-
-        {\UCAS@value@declare@rights}
+		
+		\vspace*{2ex}
+        
+		{\UCAS@value@declare@rights}
 
         {\UCAS@value@declare@rule}
 

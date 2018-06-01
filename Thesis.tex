@@ -71,14 +71,11 @@
 \linespread{1.2}% local line space
 %\intotoc{\contentsname}% add link to contents table and bookmark
 \tableofcontents% contents catalog
-}
 
-{
-\linespread{1.5}
-%\let\oldnumberline \numberline
-%\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\figurename~\oldnumberline}
+\let\oldnumberline \numberline
+\renewcommand{\numberline}{\zihao{-4}\hspace*{-0.6cm}\figurename~\oldnumberline}
 \listoffigures%
-%\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\tablename~\oldnumberline}
+\renewcommand{\numberline}{\zihao{-4}\hspace*{-0.6cm}\tablename~\oldnumberline}
 \listoftables% tables catalog
 }
 
