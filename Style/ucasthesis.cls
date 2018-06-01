@@ -243,14 +243,14 @@
     \cleardoublepage
     \thispagestyle{empty}
     \begin{center}
-        \linespread{1.5}
+        \linespread{2}
         \zihao{4}\bfseries
 
         \vspace*{50pt}
 
         {\zihao{-3}\bfseries \ulenhance[1.5pt]{\ \UCAS@value@englishtitle\ }}
 
-        \vspace*{\stretch{2}}
+        \vspace*{\stretch{2.4}}
 
         {\UCAS@label@englishstatement}
 
@@ -260,11 +260,11 @@
 
         {\UCAS@value@englishadvisor}
 
-        \vspace*{\stretch{3}}
+        \vspace*{\stretch{2.0}}
 
         {\UCAS@value@englishinstitute}
 
-        \vspace*{\stretch{1}}
+        \vspace*{\stretch{0.4}}
 
         {\UCAS@value@englishdate}
 

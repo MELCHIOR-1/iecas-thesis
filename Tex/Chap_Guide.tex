@@ -16,7 +16,6 @@
     \item 编译模板：
         \begin{enumerate}
             \item Windows用户：双击运行artratex.bat脚本。
-            \item Linux或Mac OS用户: \verb|terminal| -> \verb|chmod +x ./artratex.sh| -> \verb|./artratex.sh xa|
             \item 任意系统：都可使用\LaTeX{}编辑器打开Thesis.tex文件进行编译。
         \end{enumerate}
     \item 处理错误：若编译中遇到了问题，请先查看“常见问题”（章节~\ref{sec:qa}）。
@@ -98,24 +97,7 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
 数学公式常用命令请见 \href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{WiKibook Mathematics}。artracom.sty中对一些常用数据类型如矢量矩阵等进行了封装，这样的好处是如有一天需要修改矢量的显示形式，只需单独修改artracom.sty中的矢量定义即可实现全文档的修改。
 
 
-\newpage
-对于多个连续的公式，如果使用连续的equation环境，中间会有很大的空隙，如使用下面命令：
-\begin{verbatim}
-\begin{equation}
-	a+b=c
-\end{equation}
-\begin{equation}
-	c+d=e
-\end{equation}
-\end{verbatim} 
-编译后就是这样：
-\begin{equation}
-	a+b=c
-\end{equation}
-\begin{equation}
-	c+d=e
-\end{equation}
-而使用gather环境后，
+对于多个连续的公式，使用gather环境。
 \begin{verbatim}
 \begin{gather}
 	a+b=c\\
@@ -170,7 +152,8 @@ Img文件夹用于放置论文中所需要的图类文件，支持格式有：.j
 %\end{equation}
 %\end{spacing}
 
-如果插图的空白区域过大，以图片\verb|shock_cyn|为例，自动裁剪如图\ref{fig:shock_cyn}。
+正文，图示例。引用的图必须注明来源。
+如果插图的空白区域过大，以图片\verb|shock_cyn|为例，自动裁剪如图\ref{fig:tc_q_criteria}。
 
 
 多图的插入如图\ref{fig:oaspl}。

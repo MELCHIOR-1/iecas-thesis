@@ -58,7 +58,7 @@
 \setcounter{mycnt}{0}
 
 % 设置计数器按照阿拉伯数字计数
-\newcommand{\stepaddpaper}{\stepcounter{mycnt}{[\arabic{mycnt}] \ }}
+\newcommand{\stepaddpaper}{\stepcounter{mycnt}{[\arabic{mycnt}] \ }\hangindent=0.7cm\hangafter=1}
 
 
 \begin{document}
@@ -75,10 +75,10 @@
 
 {
 \linespread{1.5}
-\let\oldnumberline \numberline
-\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\figurename~\oldnumberline}
+%\let\oldnumberline \numberline
+%\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\figurename~\oldnumberline}
 \listoffigures%
-\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\tablename~\oldnumberline}
+%\renewcommand{\numberline}{\rmfamily\zihao{-4}\hspace*{-0.6cm}\tablename~\oldnumberline}
 \listoftables% tables catalog
 }
 
@@ -99,9 +99,11 @@
 %-> Backmatter: bibliography, glossary, index
 %-
 \backmatter% initialize the environment
-\input{Tex/Appendix}% appendix content
 \intotoc{\bibname}% add link to contents table and bookmark
 \bibliography{Biblio/ref}% bibliography
+\cleardoublepage%
+\appendix% initialize the environment
+\input{Tex/Appendix}% appendix content
 \input{Tex/Backmatter}% other information
 \end{document}
 %---------------------------------------------------------------------------%
